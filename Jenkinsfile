@@ -10,7 +10,7 @@ library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
 pipeline {   
     agent any
     tool {
-        maven 'Maven'
+        maven 'maven-3.9'
     }
     environment {
         IMAGE_NAME = 'monyakwene/demo-app:jma-1.0'
