@@ -9,7 +9,7 @@ library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
 
 pipeline {   
     agent any
-    tool {
+    tools {
         maven 'maven-3.9'
     }
     environment {
