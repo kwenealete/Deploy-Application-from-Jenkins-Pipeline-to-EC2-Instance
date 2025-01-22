@@ -67,11 +67,11 @@ pipeline {
         stage('commit version update'){
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'github-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]){
+                    withCredentials([usernamePassword(credentialsId: 'git-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]){
                         sh 'git config --global user.email "mka@yahoo.com" '
                         sh 'git config --global user.name "jenkins" '
                         
-                        sh 'git remote set-url origin https://github.com/kwenealete/Deploy-Application-from-Jenkins-Pipeline-to-EC2-Instance.git'
+                        sh 'git remote set-url origin https://${USER}:${PASS}@github.com/kwenealete/Deploy-Application-from-Jenkins-Pipeline-to-EC2-Instance.git'
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh 'git push origin HEAD:jenkins-jobs'
