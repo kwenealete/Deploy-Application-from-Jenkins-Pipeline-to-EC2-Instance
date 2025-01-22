@@ -12,9 +12,7 @@ pipeline {
     tools {
         maven 'maven-3.9'
     }
-    environment {
-        IMAGE_NAME = 'monyakwene/demo-app:jma-1.0'
-    }
+    
     stages {
          stage('increment version') {
             steps {
