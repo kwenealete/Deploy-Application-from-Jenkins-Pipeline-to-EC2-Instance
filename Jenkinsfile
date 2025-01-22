@@ -71,7 +71,7 @@ pipeline {
                         sh 'git config --global user.email "mka@yahoo.com" '
                         sh 'git config --global user.name "jenkins" '
                         
-                        sh 'git remote set-url origin https://$USER:$PASS@github.com/kwenealete/Deploy-Application-from-Jenkins-Pipeline-to-EC2-Instance.git'
+                        sh 'git remote set-url origin https://$USER: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@github.com/kwenealete/Deploy-Application-from-Jenkins-Pipeline-to-EC2-Instance.git'
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh 'git push origin HEAD:jenkins-jobs'
